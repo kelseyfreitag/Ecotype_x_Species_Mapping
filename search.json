@@ -1,0 +1,100 @@
+[
+  {
+    "objectID": "Mapping_Taxons.html",
+    "href": "Mapping_Taxons.html",
+    "title": "Mapping_Taxons",
+    "section": "",
+    "text": "# Define taxa to loop through\ntaxa_list &lt;- c(\"Birds\", \"Arthropods\", \"Vascular Plants\", \"Amphibians\", \n               \"Reptiles\", \"Mammals\", \"Lichens\", \"Mosses\")"
+  },
+  {
+    "objectID": "Mapping_Taxons.html#barren-lands",
+    "href": "Mapping_Taxons.html#barren-lands",
+    "title": "Mapping_Taxons",
+    "section": "Barren Lands",
+    "text": "Barren Lands"
+  },
+  {
+    "objectID": "Mapping_Taxons.html#grasslands",
+    "href": "Mapping_Taxons.html#grasslands",
+    "title": "Mapping_Taxons",
+    "section": "Grasslands",
+    "text": "Grasslands\nNote: Grassland raster data overestimates habitat in mountainous regions. Use cautiously; reliable trends are observed in interior BC, southern AB, and other confirmed grassland areas."
+  },
+  {
+    "objectID": "Mapping_Taxons.html#mixed-forest",
+    "href": "Mapping_Taxons.html#mixed-forest",
+    "title": "Mapping_Taxons",
+    "section": "Mixed Forest",
+    "text": "Mixed Forest"
+  },
+  {
+    "objectID": "Mapping_Taxons.html#shrubland",
+    "href": "Mapping_Taxons.html#shrubland",
+    "title": "Mapping_Taxons",
+    "section": "Shrubland",
+    "text": "Shrubland\nNote: Same caution as Grasslands applies."
+  },
+  {
+    "objectID": "Mapping_Taxons.html#taiga-needleleaf",
+    "href": "Mapping_Taxons.html#taiga-needleleaf",
+    "title": "Mapping_Taxons",
+    "section": "Taiga Needleleaf",
+    "text": "Taiga Needleleaf"
+  },
+  {
+    "objectID": "Mapping_Taxons.html#temperate-broadleaf",
+    "href": "Mapping_Taxons.html#temperate-broadleaf",
+    "title": "Mapping_Taxons",
+    "section": "Temperate Broadleaf",
+    "text": "Temperate Broadleaf"
+  },
+  {
+    "objectID": "Mapping_Taxons.html#temperate-needleleaf",
+    "href": "Mapping_Taxons.html#temperate-needleleaf",
+    "title": "Mapping_Taxons",
+    "section": "Temperate Needleleaf",
+    "text": "Temperate Needleleaf"
+  },
+  {
+    "objectID": "Mapping_Taxons.html#water",
+    "href": "Mapping_Taxons.html#water",
+    "title": "Mapping_Taxons",
+    "section": "Water",
+    "text": "Water"
+  },
+  {
+    "objectID": "Data_Handling_and_Filtering.html",
+    "href": "Data_Handling_and_Filtering.html",
+    "title": "Mapping Species-Ecotypes",
+    "section": "",
+    "text": "This workflow integrates species data with spatial habitat information to produce ecotype-specific maps. The process follows three main steps:\n\nRaster-Grid Overlay: The ecotype raster is overlaid with the 10 km × 10 km grid. Any grid cell intersecting a raster pixel is considered to contain that ecotype.\nColumn-Wise Filtering: Species are selected per ecotype to retain only those occurring within each target ecotype.\nRow-Wise Filtering: Grid cells are retained only if they contain the target ecotype.\n\nNotes:\n\nDespite filtering, some zero values may remain because the presence of a species in a given ecotype does not guarantee overlap in every grid cell. These are then removed.\nFor taxon-specific maps, an additional filtering step is applied to include only the relevant taxon.\n\n\n\n\nlibrary(terra)\nlibrary(sf)\nlibrary(tidyr)\nlibrary(dplyr)\nlibrary(stringr)\nlibrary(rnaturalearth)\nlibrary(exactextractr)\nlibrary(tidyterra)\nlibrary(ggplot2)\nlibrary(readr)"
+  },
+  {
+    "objectID": "Data_Handling_and_Filtering.html#load-required-libraries",
+    "href": "Data_Handling_and_Filtering.html#load-required-libraries",
+    "title": "Mapping Species-Ecotypes",
+    "section": "",
+    "text": "library(terra)\nlibrary(sf)\nlibrary(tidyr)\nlibrary(dplyr)\nlibrary(stringr)\nlibrary(rnaturalearth)\nlibrary(exactextractr)\nlibrary(tidyterra)\nlibrary(ggplot2)\nlibrary(readr)"
+  },
+  {
+    "objectID": "Mapping.html",
+    "href": "Mapping.html",
+    "title": "Plotting Species-Ecotypes",
+    "section": "",
+    "text": "This section demonstrates the generation of ecotype-specific species maps, including:\n\nAll species per ecotype\nSpecies per taxon within each ecotype\n\n\n\n\nlibrary(tidyr)\nlibrary(dplyr)\nlibrary(stringr)\nlibrary(terra)\nlibrary(sf)\nlibrary(ggplot2)\nlibrary(rnaturalearth)"
+  },
+  {
+    "objectID": "Mapping.html#load-required-libraries",
+    "href": "Mapping.html#load-required-libraries",
+    "title": "Plotting Species-Ecotypes",
+    "section": "",
+    "text": "library(tidyr)\nlibrary(dplyr)\nlibrary(stringr)\nlibrary(terra)\nlibrary(sf)\nlibrary(ggplot2)\nlibrary(rnaturalearth)"
+  },
+  {
+    "objectID": "Mapping.html#mapping-all-species-per-ecotype",
+    "href": "Mapping.html#mapping-all-species-per-ecotype",
+    "title": "Plotting Species-Ecotypes",
+    "section": "1. Mapping All Species per Ecotype",
+    "text": "1. Mapping All Species per Ecotype"
+  }
+]
